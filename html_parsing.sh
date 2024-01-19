@@ -48,4 +48,4 @@ fi
 #precisa comentar as opções abaixo para conseguir manter os arquivos salvos
 rm $1.ip.txt
 rm $1.domains.txt
-rm cache
+rm cache.txt

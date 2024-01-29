@@ -1,5 +1,8 @@
 # BashScript
-----------------------> html_script.sh <----------------------
+----------------------> 
+html_parsing.sh 
+<----------------------
+script para obter subdomínios e seus respectivos IP address através do source code de páginas web. 
 
 
 ----------------------> port_knocking-script.sh <----------------------

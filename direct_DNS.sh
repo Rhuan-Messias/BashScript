@@ -1,6 +1,6 @@
 #!/bin/bash
 
-domain_list="firewall monitoring monitoramento intranet ns1 ns01 mail ns2 webmail rh sistema system admin logs devs documentos server api docs doc"
+domain_list="intranet extranet ns1 ns2 mail webmail admin api vpn ftp ssh backup portal proxy monitor firewall gateway" 
 
 for item in ${domain_list}; do 
 	host $item.$1 

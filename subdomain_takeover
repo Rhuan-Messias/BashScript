@@ -1,0 +1,7 @@
+#/bin/bash
+
+domain_list="intranet extranet ns1 ns2 mail webmail admin api vpn ftp ssh backup portal proxy monitor firewall gateway" 
+
+for word in ${domain_list}; do 
+	host $word.$1 | grep -v "NXDOMAIN"
+done

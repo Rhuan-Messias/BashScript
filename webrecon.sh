@@ -12,3 +12,9 @@ for word in ${wordlist};do
 done
 
 echo "looking for archives" 
+for word in ${wordlist};do 
+	response=$(curl -s -H "User-agent: disguised" -o /dev/null -w "%{http_code}" $1/$word.$2) #here it look for files with the extention $2
+	if [ $response == "200" ];  then
+		echo "file found: $1/$word.$2"
+	fi
+done

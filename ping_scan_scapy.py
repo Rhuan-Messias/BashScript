@@ -12,7 +12,7 @@ for ip in range(1,255): #remember that the range function only gets until max-1
     packet = p_ip/ICMP()
     answer,noanswer = sr(packet,timeout=1)
     if answer:
-        print("Host is UP:", ip_testing)
+        print("Host is UP:", answer[0][1].src)
     else:
         pass
     

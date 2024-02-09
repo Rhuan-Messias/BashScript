@@ -7,7 +7,7 @@ import sys
 conf.verb = 0
 print("Up Hosts")
 for ip in range(1,255): #remember that the range function only gets until max-1
-    ip_testing = "192.168.1." + str(ip)
+    ip_testing = "172.30.0." + str(ip)
     p_ip = IP(dst=ip_testing)
     packet = p_ip/ICMP()
     answer,noanswer = sr(packet,timeout=1)

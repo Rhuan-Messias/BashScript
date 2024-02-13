@@ -1,8 +1,11 @@
 #!/usr/bin/python
 
-import socket,sys
+import socket,sys,re
 
 file = open("list_of_usernames.txt") #put your wordlist for usernames here
+
+#when the user exists, the code 252 is returned
+#when the user doesn't exist, the code 550 is returned
 
 for user in file:
   tcp = socket.socket()
@@ -11,3 +14,5 @@ for user in file:
   tcp.send("VRFY" + user)
   print(user)
 
+if re.search("252", user): #let's search in the user variable for the positive code 252 with re library
+  print("User Found:" + user)

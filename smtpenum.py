@@ -3,6 +3,10 @@
 
 import socket,sys
 
+# sys.arg[0] is the name of the program file
+# sys.argv[1] is the first thing you write after the programs name, the IP address in this case
+# sys.argv[2] is the third thing written, the user name in this case 
+
 #check if it the arguments was input
 if len(sys.argv) != 3: 
   print("[+] Example: python3 smtpenum.py 192.168.0.1 root")

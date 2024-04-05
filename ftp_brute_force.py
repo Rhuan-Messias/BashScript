@@ -24,5 +24,4 @@ for word in f.readlines():
 
 if re.search("230", answer): #using re library, if there's 230 inside the var answer, it will do the IF
   print("[+] Senha encontrada --->", palavra)
-else:
-  print("Acesso negado")
+  break

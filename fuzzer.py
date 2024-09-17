@@ -12,4 +12,4 @@ for dados in lista:
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.connect(("192.168.0.5", 5800))
 	s.recv(1024)
-	s.send("SEND"+dados+"\r\n")
+	s.send("SEND "+dados+"\r\n")

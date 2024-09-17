@@ -3,7 +3,7 @@
 lista = ["A"]
 print (type(lista))
 
-while len(lista) <= 3:
+while len(lista) <= 50:
 	lista.append("A"*contador)
 	contador = contador + 100
 
